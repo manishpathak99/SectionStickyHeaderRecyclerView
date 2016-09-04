@@ -1,0 +1,100 @@
+<resources>
+    <string name="app_name">SectionStickyHeader</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Action Mode -->
+    <string name="action_delete">Delete</string>
+    <string name="action_select_all">Select All</string>
+    <string name="action_selected_one">%1$s selected</string>
+    <string name="action_selected_many">%1$s selected</string>
+    <string name="action_deleted">Deleted</string>
+    <string name="action_archived">Archived</string>
+    <string name="action_merge">Merge</string>
+    <string name="action_split">Split</string>
+
+    <!-- Actions -->
+    <string name="action_reset">Reset</string>
+    <string name="action_search">Search...</string>
+    <string name="linear_layout">Linear Layout</string>
+    <string name="grid_layout">Grid Layout</string>
+    <string name="staggered_layout">Staggered Layout</string>
+    <string name="columns">%1$s column(s)</string>
+    <string name="reverse_scrolling">Reverse scrolling</string>
+    <string name="forward_scrolling">Forward scrolling</string>
+    <string name="auto_collapse">Auto collapse</string>
+    <string name="keep_expanded">Keep expanded</string>
+    <string name="expand_all">Expand All</string>
+    <string name="collapse_all">Collapse All</string>
+    <string name="show_headers">Show Headers</string>
+    <string name="hide_headers">Hide Headers</string>
+    <string name="sticky_headers">Sticky Headers</string>
+    <string name="scroll_headers">Scroll Headers</string>
+    <string name="create_new_item">Create new Item</string>
+    <string name="mode_idle">Mode Idle</string>
+    <string name="mode_single">Mode Single</string>
+    <string name="undo">Undo</string>
+
+    <!-- User Learns Selection -->
+    <string name="uls_title"><![CDATA[<i>Click on Image (or LongClick on Item) to select that Item</i>]]></string>
+    <string name="uls_subtitle"><![CDATA[<i>This is an example of 2nd view type</i>]]></string>
+
+    <!-- Dialog -->
+    <string name="dialog_edit_title_hint">Title</string>
+    <string name="dialog_edit_title">Edit title</string>
+    <string name="CANCEL">Cancel</string>
+    <string name="OK">OK</string>
+
+    <!-- Extras -->
+    <string name="no_items">No items</string>
+    <string name="err_no_edit">Nothing to modify</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="select_item_type">"Select Item Type                     "</string>
+    <string name="select_section_reference">"Select Section Reference             "</string>
+    <string name="likes">%1$s likes</string>
+    <string name="merged_with">Merged with%1$s</string><!--No space between!-->
+    <string name="status_a">STATUS A</string>
+    <string name="status_b">STATUS B</string>
+    <string name="status_c">STATUS C</string>
+    <string name="status_d">STATUS D</string>
+    <string name="status_e">STATUS E</string>
+
+    <!-- Menu Drawers -->
+    <string name="overall">Overall</string>
+    <!--<string name="overall_description">Examples may have options where available to enable/disable: (1) Filter (2) FastScroller (3) Grid Layout (4) Sticky Headers</string>-->
+
+    <string name="selection_modes">Selection modes</string>
+    <string name="selection_modes_description">IDLE, SINGLE, MULTI + ActionModeHelper + UndoHelper</string>
+
+    <string name="endless_scrolling">EndlessScrolling</string>
+    <string name="endless_scrolling_description">EndlessScrolling + Adapter Animation + Swipe-To-Delete w/rear-views + ActionModeHelper + UndoHelper</string><!-- TODO: in combination with Item Animation -->
+
+    <string name="expandable">Expandable</string>
+    <string name="expandable_description">List with expandable items + Selection Coherence + Filter + ActionModeHelper + UndoHelper</string>
+
+    <string name="multi_level_expandable">Expandable Multi-Level</string>
+    <string name="multi_level_expandable_description">2 levels of expandable + Selection Coherence + Swipeable &amp; Draggable items + ActionModeHelper + UndoHelper</string>
+
+    <string name="expandable_sections">Expandable Sections</string>
+    <string name="expandable_sections_description">Sections with (sticky) headers that can expand/collapse + Drag items + Filter</string>
+
+    <string name="headers_sections">Headers and Sections</string>
+    <string name="headers_sections_description">Clickable sticky headers for sections + Drag items with Auto-Linkage + Filter</string>
+
+    <string name="instagram_headers">Instagram headers</string>
+    <string name="instagram_headers_description"><![CDATA[1 sticky header for each item + EndlessScrolling.<br/><font color="#ff4081"><b>Internet is required.</b></font>]]></string>
+
+    <string name="model_holders">Item Model Holder</string>
+    <string name="model_holders_description"><![CDATA[A representation of Items holding the model object.<br/><font color="#ff4081"><b>Check the code!</b></font>]]></string>
+
+    <string name="special_layouts">Special Layouts</string>
+    <string name="horizontal">Horizontal Layout</string>
+    <!--<string name="horizontal_description"></string>-->
+    <string name="staggered_description">Cards with (Sticky) headers disposed in Staggered Layout, dynamic background, insertion and sorting</string>
+
+    <!-- About -->
+    <string name="github">GitHub page</string>
+    <string name="about_title">About</string>
+    <string name="about_version">%1$s #%2$s</string>
+
+</resources>

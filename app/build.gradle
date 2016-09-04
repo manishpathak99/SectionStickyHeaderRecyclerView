@@ -1,0 +1,49 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion "24.0.1"
+
+    defaultConfig {
+        applicationId "in.test.sectionstickyheader"
+        minSdkVersion 14
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    testCompile 'junit:junit:4.12'
+//    compile 'com.android.support:appcompat-v7:24.2.0'
+//    compile 'com.android.support:design:24.2.0'
+
+    //Support Libraries
+    compile supportDependencies.appcompat
+    compile supportDependencies.cardview
+    compile (supportDependencies.design) {
+        exclude module: "support-v4"
+        exclude module: "support-annotations"
+    }
+    compile (supportDependencies.recyclerview) {
+        exclude module: "support-v4";
+        exclude module: "support-annotations"
+    }
+
+    //Using JCenter
+    compile 'eu.davidea:flexible-adapter:5.0.0-b7'
+    compile('com.jakewharton:butterknife:8.0.1') {
+        transitive = true
+        exclude module: 'support-annotations'
+    }
+
+    //FlipView
+    compile "eu.davidea:flipview:1.1.1"
+}
