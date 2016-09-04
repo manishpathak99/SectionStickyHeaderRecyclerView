@@ -17,6 +17,7 @@ import eu.davidea.flexibleadapter.items.IHeader;
 import eu.davidea.flexibleadapter.items.ISectionable;
 import eu.davidea.flipview.FlipView;
 import in.test.sectionstickyheader.ExampleAdapter;
+import in.test.sectionstickyheader.MainActivity;
 import in.test.sectionstickyheader.R;
 import in.test.sectionstickyheader.service.DatabaseService;
 import in.test.sectionstickyheader.utils.Utils;
@@ -94,7 +95,7 @@ public class FragmentHeadersSections extends AbstractFragment
 
 		//Add FastScroll to the RecyclerView, after the Adapter has been attached the RecyclerView!!!
 		mAdapter.setFastScroller((FastScroller) getActivity().findViewById(R.id.fast_scroller),
-				Utils.getColorAccent(getActivity()), (in.test.sectionstickyheader.fragments.MainActivity) getActivity());
+				Utils.getColorAccent(getActivity()), (MainActivity) getActivity());
 		mAdapter.setLongPressDragEnabled(true)
 				.setHandleDragEnabled(true)
 				.setSwipeEnabled(true)
