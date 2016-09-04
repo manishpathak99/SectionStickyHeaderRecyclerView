@@ -7,13 +7,10 @@ import android.os.Handler;
 import android.os.Looper;
 import android.os.Message;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.FragmentManager;
-import android.support.v4.view.GravityCompat;
 import android.support.v4.view.MenuItemCompat;
 import android.support.v4.view.ViewCompat;
-import android.support.v4.widget.DrawerLayout;
 import android.support.v4.widget.SwipeRefreshLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.view.ActionMode;
@@ -75,13 +72,10 @@ public class MainActivity extends AppCompatActivity implements
 	/**
 	 * RecyclerView and related objects
 	 */
-	private RecyclerView mRecyclerView;
 	private FlexibleAdapter<AbstractFlexibleItem> mAdapter;
 	private ActionModeHelper mActionModeHelper;
 	private SwipeRefreshLayout mSwipeRefreshLayout;
 	private Toolbar mToolbar;
-	private DrawerLayout mDrawer;
-	private NavigationView mNavigationView;
 	private AbstractFragment mFragment;
 	private SearchView mSearchView;
 	private final Handler mRefreshHandler = new Handler(Looper.getMainLooper(), new Handler.Callback() {
@@ -117,8 +111,6 @@ public class MainActivity extends AppCompatActivity implements
 
 		//Initialize Toolbar, Drawer, FAB & BottomSheet
 		initializeToolbar();
-//		initializeDrawer();
-//		initializeFab();
 		//Initialize Fragment containing Adapter & RecyclerView
 		initializeFragment(savedInstanceState);
 
@@ -148,7 +140,6 @@ public class MainActivity extends AppCompatActivity implements
 
 	@Override
 	public void onFragmentChange(SwipeRefreshLayout swipeRefreshLayout, RecyclerView recyclerView, int mode) {
-		mRecyclerView = recyclerView;
 		mAdapter = (FlexibleAdapter) recyclerView.getAdapter();
 		mSwipeRefreshLayout = swipeRefreshLayout;
 		initializeSwipeToRefresh();
@@ -174,7 +165,7 @@ public class MainActivity extends AppCompatActivity implements
 		}
 		if (mFragment == null) {
 			mFragment = FragmentHeadersSections.newInstance(2);
-			mToolbar.setSubtitle(getString(R.string.overall));
+			mToolbar.setSubtitle(getString(R.string.headers_sections));
 		}
 		FragmentManager fragmentManager = getSupportFragmentManager();
 		fragmentManager.beginTransaction().replace(R.id.recycler_view_container,
@@ -832,11 +823,6 @@ public class MainActivity extends AppCompatActivity implements
 
 	@Override
 	public void onBackPressed() {
-		//If Drawer is open, back key closes it
-		if (mDrawer.isDrawerOpen(GravityCompat.START)) {
-			mDrawer.closeDrawer(GravityCompat.START);
-			return;
-		}
 		//If ActionMode is active, back key closes it
 		if (mActionModeHelper.destroyActionModeIfCan()) return;
 		//If SearchView is visible, back key cancels search and iconify it
